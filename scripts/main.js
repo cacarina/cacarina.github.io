@@ -22,6 +22,8 @@ function markdownToHtml(markdown) {
   const html = [];
   let inList = false;
   let listType = "";
+  let inCodeBlock = false;
+  let codeBlockLines = [];
 
   function closeList() {
     if (inList) {
@@ -33,6 +35,25 @@ function markdownToHtml(markdown) {
 
   for (const line of lines) {
     const trimmed = line.trim();
+
+    if (trimmed.startsWith("```")) {
+      closeList();
+
+      if (inCodeBlock) {
+        html.push(`<pre><code>${escapeHtml(codeBlockLines.join("\n"))}</code></pre>`);
+        inCodeBlock = false;
+        codeBlockLines = [];
+      } else {
+        inCodeBlock = true;
+      }
+
+      continue;
+    }
+
+    if (inCodeBlock) {
+      codeBlockLines.push(line);
+      continue;
+    }
 
     if (!trimmed) {
       closeList();
@@ -78,6 +99,10 @@ function markdownToHtml(markdown) {
   }
 
   closeList();
+  if (inCodeBlock) {
+    html.push(`<pre><code>${escapeHtml(codeBlockLines.join("\n"))}</code></pre>`);
+  }
+
   return html.join("\n");
 }
 
