@@ -19,4 +19,29 @@ Markdown 的好处是：
 2. 在 `posts.json` 里登记文章标题、日期和简介
 3. 提交并推送到 GitHub
 
+详细步骤是：
+  1. 在 posts/ 里新建一个 Markdown 文件，比如：
+
+  posts/my-second-post.md
+
+  2. 在 posts.json 里添加文章信息：
+
+  {
+    "slug": "my-second-post",
+    "title": "我的第二篇文章",
+    "date": "2026-05-05",
+    "summary": "这是一句话简介。"
+  }
+
+  3. 然后提交并推送：
+
+  git add .
+  git commit -m "Add new post"
+  git push
+
+  注意：现在本地比 GitHub 多 1 个提交，所以你要发布到线上时执行：
+
+  cd /Users/bytedance/cacarina_blog
+  git push
+
 这样博客就能继续更新了。

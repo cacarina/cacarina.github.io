@@ -1,14 +1,8 @@
 [
   {
     "slug": "hello-github-pages",
-    "title": "我的第2篇 GitHub Pages 博客",
+    "title": "我的第1篇 GitHub Pages 博客",
     "date": "2026-05-05",
-    "summary": "从一个静态网页开始，记录搭建个人博客的第一步。"
-  },
-  {
-    "slug": "hello-github-pages3",
-    "title": "我的第3篇 GitHub Pages 博客",
-    "date": "2026-05-05",
-    "summary": "从一个静态网页开始，记录搭建个人博客的第一步。"
+    "summary": "从一个静态网页开始，记录搭建blog的第一步。"
   }
 ]
