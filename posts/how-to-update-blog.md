@@ -108,3 +108,18 @@ posts/my-second-post.md
 ```
 
 注意：`slug` 要和 Markdown 文件名一致。比如 `slug` 是 `my-second-post`，文件名就要是 `posts/my-second-post.md`。
+
+
+ 好，那之后新增文章就记住这条规则：
+
+  posts.json 里的 slug = posts/ 里的 Markdown 文件名去掉 .md
+
+  例如：
+
+  posts/my-new-post.md
+
+  对应：
+
+  "slug": "my-new-post"
+
+  并且尽量只用小写字母、数字和连字符。

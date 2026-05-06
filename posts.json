@@ -11,7 +11,8 @@
     "date": "2026-05-05",
     "summary": "从一个静态网页开始，记录搭建blog的第一步。"
   },
-  {"slug": "what-have-I-done-this-week.md",
+  {
+    "slug": "what-have-i-done-this-week",
     "title": "我的碎碎念",
     "date": "2026-05-06",
     "summary": "这周干的事"
